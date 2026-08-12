@@ -89,7 +89,7 @@ public class CommandeAjoutTest {
 
 		// Après rechargement depuis la base, on retrouve bien les 3 lignes
 		em.clear();
-		Commande commandeRelue = em.find(Commande.class, 1L);
+		Commande commandeRelue = em.find(Commande.class, 1L);  // comme clear() on va à rechercher depuis la BDD
 		assertEquals(3, commandeRelue.getLigneDetails().size());
 
 		em.close();
